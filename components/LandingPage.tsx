@@ -1,6 +1,6 @@
 "use client";
 import { SignIn } from "@clerk/nextjs";
-import { neobrutalism } from "@clerk/themes";
+import { dark, neobrutalism } from "@clerk/themes";
 import Image from "next/image";
 
 
@@ -33,7 +33,7 @@ export default function LandingPage() {
         <SignIn
           routing="hash" // Keeps sign-in UI on the same page using hash-based routing
           appearance={{
-            baseTheme: neobrutalism, // Applies the neobrutalism theme style to the sign-in UI
+            baseTheme: dark, // Applies the neobrutalism theme style to the sign-in UI
           }}
         />
       </div>
