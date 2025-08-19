@@ -84,6 +84,9 @@ export const ScheduleAvailabilityRelations = relations(
     })
   )
 
+  // ?neon est une base de données serverless (c'est a dire qu'elle s'adapte automatiquement à la charge de travail et ne nécessite pas de gestion de serveur  ) qui utilise PostgreSQL comme moteur de base de données.
+   
+  // ?Drizzle ORM est un ORM (Object-Relational Mapping) qui permet d'interagir avec la base de données de manière type-safe et intuitive. Il est conçu pour fonctionner avec des bases de données relationnelles comme PostgreSQL, MySQL, SQLite, etc.
 
   // ! ensuite copier ceci dans package.json (dans scripts) pour les commandes drizzle
   // "db:generate": "drizzle-kit generate", pour generer le schema
