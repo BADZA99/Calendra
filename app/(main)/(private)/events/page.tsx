@@ -1,4 +1,4 @@
-// import EventCard from "@/components/cards/EventCard";
+import EventCard from "@/components/cards/EventCard";
 import { Button } from "@/components/ui/button";
 import { getEvents } from "@/server/actions/events";
 import { auth } from "@clerk/nextjs/server";
@@ -42,8 +42,7 @@ export default async function EventsPage() {
             {events.length > 0 ? (
               <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-10">
                 {events?.map(event => (
-                  // <EventCard key={event.id} {...event} />
-                  <p>oo</p>
+                  <EventCard key={event.id} {...event} />
                 ))}
               </div>
             ) 

@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card"
-// import { formatEventDescription } from "@/lib/formatters"
+import { formatEventDescription } from "@/lib/formatters"
 import { Button } from "../ui/button"
 import Link from "next/link"
 import { CopyEventButton } from "../CopyEventButton"
@@ -31,7 +31,7 @@ type EventCardProps = {
           <CardHeader className={cn(!isActive && "opacity-50")}>
             <CardTitle>{name}</CardTitle>
             <CardDescription>
-              {/* {formatEventDescription(durationInMinutes)} */}
+              {formatEventDescription(durationInMinutes)}
             </CardDescription>
           </CardHeader>
     
@@ -46,6 +46,7 @@ type EventCardProps = {
           <CardFooter className="flex justify-end gap-2 mt-auto">
             {/* Show copy button only if event is active */}
             {isActive && (
+              // ? bouton special cree a partir du bouton nattif et des fonctions de react
               <CopyEventButton
                 variant="outline"
                 eventId={id}
