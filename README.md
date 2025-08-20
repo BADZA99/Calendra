@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Présentation du projet
 
-## Getting Started
+Calendra est une application web de gestion et de réservation d'événements et de créneaux horaires. Elle permet aux utilisateurs de créer des événements privés ou publics, de gérer leur planning, et d'offrir la possibilité à d'autres utilisateurs de réserver des créneaux pour des réunions ou des événements. L'interface propose une navigation claire entre les espaces publics et privés, la gestion des profils, et l'intégration avec Google Calendar pour synchroniser les événements.
 
-First, run the development server:
+## Stack technique
 
+- **Next.js** : Framework React pour le développement web fullstack, utilisé pour le routage, le rendu côté serveur et la gestion des pages.
+- **TypeScript** : Typage statique pour une meilleure fiabilité et maintenabilité du code.
+- **Drizzle ORM** : Gestion de la base de données et des migrations SQL.
+- **Neon** : Base de données PostgreSQL serverless pour le stockage des données.
+- **Google APIs** : Intégration avec Google Calendar pour la synchronisation des événements.
+- **Clerk** : Gestion de l'authentification et des utilisateurs.
+- **PostCSS** : Traitement avancé du CSS.
+- **Composants UI personnalisés** : Utilisation de composants réutilisables pour les formulaires, boutons, calendriers, etc.
+
+## Aperçu visuel
+
+Voici quelques captures d'écran illustrant les principales fonctionnalités de Calendra :
+
+### Page de réservation réussie
+![Booking Success](screenshots/booking%20success.png)
+
+### Page de connexion
+![Login Page](screenshots/login%20page.png)
+
+### Profil public
+![Public Profile](screenshots/public%20profile.png)
+
+### Page de planning
+![Schedule Page](screenshots/schedule%20page.png)
+
+### Page des événements de l'utilisateur
+![User's Events Page](screenshots/user's%20events%20page.png)
+
+## Installation et configuration
+
+1. Clonez le dépôt
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/BADZA99/Calendra.git
+cd Calendra
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Installez les dépendances
+```bash
+npm install
+# ou
+yarn install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Configurez les variables d'environnement
+- Créez un fichier `.env` à la racine du projet
+- Ajoutez les variables nécessaires :
+  ```
+  # Base de données
+  DATABASE_URL=votre_url_neon_db
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+  # Clerk Auth
+  NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=votre_clerk_publishable_key
+  CLERK_SECRET_KEY=votre_clerk_secret_key
 
-## Learn More
+  # Google Calendar
+  GOOGLE_CLIENT_ID=votre_google_client_id
+  GOOGLE_CLIENT_SECRET=votre_google_client_secret
+  ```
 
-To learn more about Next.js, take a look at the following resources:
+4. Lancez les migrations de la base de données
+```bash
+npm run db:push
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. Démarrez le serveur de développement
+```bash
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+L'application sera disponible sur [http://localhost:3000](http://localhost:3000)
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
