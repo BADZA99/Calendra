@@ -14,10 +14,11 @@ import { getCalendarEventTimes } from "../google/googleCalendar"
 import { addMinutes, areIntervalsOverlapping, isFriday, isMonday, isSaturday, isSunday, isThursday, isTuesday, isWednesday, isWithinInterval, setHours, setMinutes } from "date-fns"
 import { DAYS_OF_WEEK_IN_ORDER } from "@/constants"
 
-
+// DEFINIR LE TYPE DE SCHEDULE ET AVAILABILITIES
 type ScheduleRow = typeof ScheduleTable.$inferSelect
 type AvailabilityRow = typeof ScheduleAvailabilityTable.$inferSelect
 
+// DEFINIR LE TYPE DE SCHEDULE AVEC LES AVAILABILITIES
 export type FullSchedule = ScheduleRow & {
   availabilities: AvailabilityRow[]
 }
