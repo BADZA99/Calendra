@@ -1,6 +1,8 @@
-# Présentation du projet
+# calendevents - Application de gestion d'événements
 
-Calendra est une application web de gestion et de réservation d'événements et de créneaux horaires. Elle permet aux utilisateurs de créer des événements privés ou publics, de gérer leur planning, et d'offrir la possibilité à d'autres utilisateurs de réserver des créneaux pour des réunions ou des événements. L'interface propose une navigation claire entre les espaces publics et privés, la gestion des profils, et l'intégration avec Google Calendar pour synchroniser les événements.
+🌐 **Application déployée** : [https://calendevents.vercel.app/](https://calendevents.vercel.app/)
+
+calendevents est une application web de gestion et de réservation d'événements et de créneaux horaires. Elle permet aux utilisateurs de créer des événements privés ou publics, de gérer leur planning, et d'offrir la possibilité à d'autres utilisateurs de réserver des créneaux pour des réunions ou des événements. L'interface propose une navigation claire entre les espaces publics et privés, la gestion des profils, et l'intégration avec Google Calendar pour synchroniser les événements.
 
 ## Stack technique
 
@@ -15,7 +17,7 @@ Calendra est une application web de gestion et de réservation d'événements et
 
 ## Aperçu visuel
 
-Voici quelques captures d'écran illustrant les principales fonctionnalités de Calendra :
+Voici quelques captures d'écran illustrant les principales fonctionnalités de calendevents :
 
 ### Page de réservation réussie
 ![Booking Success](screenshots/booking%20success.png)
@@ -36,8 +38,8 @@ Voici quelques captures d'écran illustrant les principales fonctionnalités de 
 
 1. Clonez le dépôt
 ```bash
-git clone https://github.com/BADZA99/Calendra.git
-cd Calendra
+git clone https://github.com/BADZA99/calendevents.git
+cd calendevents
 ```
 
 2. Installez les dépendances
