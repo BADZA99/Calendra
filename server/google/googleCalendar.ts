@@ -14,7 +14,7 @@ async function getOAuthClient(clerkUserId: string) {
         // Initialize Clerk client
         const client = await clerkClient()
 
-        // Fetch the OAuth access token for the given Clerk user ID
+        // Fetch the OAuth access token for the given Clerk user  ID
         const { data } = await client.users.getUserOauthAccessToken(clerkUserId, 'google')
 
         // Check if the data is empty or the token is missing, throw an error
@@ -42,7 +42,7 @@ async function getOAuthClient(clerkUserId: string) {
 }
 
 
-// Fetch and format calendar events for a user between a given date range
+//  Fetch and format calendar events for a user between a given date range
 export async function getCalendarEventTimes(
     clerkUserId: string,
     { start, end }: { start: Date; end: Date }

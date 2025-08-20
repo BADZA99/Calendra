@@ -107,7 +107,7 @@ export async function saveSchedule(
  * 2. Do not overlap with existing Google Calendar events
  */
 export async function getValidTimesFromSchedule(
-    timesInOrder: Date[], // All possible time slots to check
+    timesInOrder: Date[], //  All possible time slots to check
     event: { clerkUserId: string; durationInMinutes: number } // Event-specific data
 ) : Promise<Date[]> {
 
